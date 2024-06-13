@@ -5,20 +5,18 @@ public class Member {
 	private String memberPw;
 	private String memberName;
 	private String memberLevel;
-	private String memberMoblie;
+	private String memberMobile;
 	
 	public Member() {}
 	
-	
-	public Member(String memberId, String memberPw, String memberName, String memberLevel, String memberMoblie) {
+	public Member(String memberId, String memberPw, String memberName, String memberLevel, String memberMobile) {
 		super();
 		this.memberId = memberId;
 		this.memberPw = memberPw;
 		this.memberName = memberName;
 		this.memberLevel = memberLevel;
-		this.memberMoblie = memberMoblie;
+		this.memberMobile = memberMobile;
 	}
-
 
 	public String getMemberId() {
 		return memberId;
@@ -44,13 +42,12 @@ public class Member {
 	public void setMemberLevel(String memberLevel) {
 		this.memberLevel = memberLevel;
 	}
-	public String getMemberMoblie() {
-		return memberMoblie;
+	public String getMemberMobile() {
+		return memberMobile;
 	}
-	public void setMemberMoblie(String memberMoblie) {
-		this.memberMoblie = memberMoblie;
+	public void setMemberMobile(String memberMobile) {
+		this.memberMobile = memberMobile;
 	}
-
 
 	@Override
 	public String toString() {
@@ -63,9 +60,11 @@ public class Member {
 		builder.append(memberName);
 		builder.append(", memberLevel=");
 		builder.append(memberLevel);
-		builder.append(", memberMoblie=");
-		builder.append(memberMoblie);
+		builder.append(", memberMobile=");
+		builder.append(memberMobile);
 		builder.append("]");
 		return builder.toString();
 	}
+	
+	
 }
