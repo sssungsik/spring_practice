@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{layout/default}">
 <head>
-	<meta charset="UTF-8">
-	<title th:text="${title}">thymeleaf 반복문</title>
 	<style>
 		table{
 			border: 1px solid black;
@@ -22,7 +22,7 @@
 		}
 	</style>
 </head>
-<body>
+<th:block layout:fragment="customContent">
 	<h1>thymeleaf 반복문</h1>
 	- 태그속성 th:each 문법<br>
 	- 문법예시 : th:each="약어(객체, 객체의 상태) : ${반복가능한 객체}"<br>
@@ -67,7 +67,7 @@
 		<label th:text="${num}"></label>
 	</div>
 
-</body>
+</th:block>
 </html>
 
 
