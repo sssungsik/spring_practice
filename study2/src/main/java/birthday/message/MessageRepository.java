@@ -1,4 +1,4 @@
-package study2;
+package birthday.message;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

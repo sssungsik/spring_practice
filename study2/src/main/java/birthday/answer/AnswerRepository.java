@@ -1,4 +1,4 @@
-package study2;
+package birthday.answer;
 
 import org.springframework.data.repository.CrudRepository;
 

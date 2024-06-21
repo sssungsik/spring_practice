@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<h1>내용</h1>
+<table style="border: 2px solid pink; border-radius: 5px">
+    <thead>
+        <tr>
+            <th th:text="${message.title}"></th>
+            <th th:text="'(' + |${#lists.size(message.answerList)}| + ')'"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td th:text="${message.content}"></td>
+        </tr>
+        <tr>
+            <td th:each="answer : ${message.answerList}"
+                th:text="'-' + ${answer.content}"
+                style="color: blue"></td>
+        </tr>
+    </tbody>
+</table>
+
+<form th:action="@{|/answer/create/${message.id}|}" method="post">
+    <textarea name="content" id="content" rows="15"></textarea>
+    <input type="submit" value="글 남기기">
+
+
+
+</form>
+
+</html>

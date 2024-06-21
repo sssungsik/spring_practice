@@ -1,9 +1,10 @@
-package study2;
+package birthday.answer;
 
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import birthday.message.Message;
 
 
 import java.time.LocalDateTime;
